@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <meta charset="utf-8">
+        <title>Bilan</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+.slideshow-container {
+  max-width: 850px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+.next {
+  cursor: pointer;
+  position:absolute;
+  right: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 15px;
+  user-select: none;
+}
+
+.prev{
+  cursor: pointer;
+  position:absolute;
+  left: 0;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 15px;
+  user-select: none;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3a3a3a;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bilan</h1>
+    </header>
+    <main>
+        <section>
+            <div class="bilan-1">
+                <p>
+                    Le bilan de mes cinq jours de stage chez Ashita Software a été extrêmement positif et enrichissant. En l'espace d'une semaine, j'ai connu une immersion profonde dans le monde du développement logiciel, passant d'une compréhension minimale à une participation active dans un environnement professionnel stimulant.
+                </p>
+            </div>
+            <div class="bilan-2">
+                <p>
+                    Points forts du stage : <P></P> Les points forts étaient l'apprentissage intensif, la collaboration, un climat positif, une nouvelle comprehension technique et une certaine autonomie.
+                <p></p>
+                    Apprentissage intensif : <P></P>Malgré mon manque d'expérience préalable en programmation, Jérémie su a créé un environnement d'apprentissage favorable. Les sessions de formation, les travaux pratiques et les interactions avec Jérémie ont accéléré ma compréhension des concepts fondamentaux.
+                <p></p>
+                    Responsabilités progressives : <P></P>Chaque jour, les tâches qui m'étaient confiées devenaient un peu plus complexes. Cela m'a permis de consolider mes compétences progressivement tout en restant constamment stimulé par de nouveaux défis.
+                <p></p>
+                    Climat positif : <P></P>L'atmosphère chez Ashita Software était bienveillante et encourageante. Les erreurs étaient considérées comme des opportunités d'apprentissage, et l'ensemble de l'équipe était engagé dans le succès de chacun.
+                <p></p>
+                    Compréhension technique : <P></P>Bien que j'aie fait des progrès significatifs, certains concepts plus avancés demeurent encore flous pour moi. Cependant, cela est compréhensible compte tenu de la courte durée du stage.
+                <p></p>
+                    Autonomie : <P></P>En raison de mon manque d'expérience, j'ai souvent eu besoin de l'aide de Jérémie pour résoudre des problèmes. Continuer à travailler sur ma capacité à résoudre des défis de manière autonome serait bénéfique.
+                <p></p>
+                    Conclusion :<P></P>
+
+                    Mon stage chez Ashita Software a été une expérience transformative. J'ai non seulement acquis des compétences techniques, mais j'ai également développé une compréhension approfondie du processus de développement logiciel et de la dynamique d'une équipe professionnelle. Bien que mon stage formel se soit terminé, je suis plus motivé que jamais à poursuivre mon apprentissage dans le monde passionnant de la programmation. Je tiens à exprimer ma gratitude envers l'équipe d'Ashita Software, en particulier envers Jérémie Lopez, pour leur soutien continu et leur engagement dans mon développement professionnel.
+                </p>
+            </div>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="image/IMG_20240119_141516.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="image/IMG_20240116_121509.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="image/IMG_20240116_102826.jpg" style="width:100%">
+    </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+         showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+         }
+         for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+        }
+         slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+    <section>
+        <div class="conteneurj1">
+        <a class="boutonj1" href="index.html">Retour</a>
+        </div>
+    </section>
+    </main>
+
+    </body>
+</html> 
